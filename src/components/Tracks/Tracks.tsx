@@ -7,6 +7,7 @@ import { TrackType } from "@/types/tracks";
 export async function Tracks() {
   let tracks: TrackType[] = [];
   let error = "";
+  
   try {
     tracks = await getTracks();
   } catch (err: unknown) {

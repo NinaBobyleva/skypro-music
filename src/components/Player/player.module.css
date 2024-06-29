@@ -55,6 +55,13 @@
     fill: transparent;
     stroke: #696969;
 }
+
+.playerBtnRepeatSvgActive {
+    width: 18px;
+    height: 12px;
+    fill: transparent;
+    stroke: #ffffff;
+}
   
 .playerBtnShuffle {
     display: flex;

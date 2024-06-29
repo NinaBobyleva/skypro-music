@@ -1,7 +1,7 @@
-const API_URL = "https://skypro-music-api.skyeng.tech/catalog/track/all/";
+const TRACK_URL = "https://skypro-music-api.skyeng.tech/catalog/track/";
 
 export async function getTracks() {
-    const res = await fetch(API_URL);
+    const res = await fetch(`${TRACK_URL}all/`);
     if (!res.ok) {
         throw new Error(res.statusText);
     }

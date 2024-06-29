@@ -4,21 +4,24 @@ import { Sidebar } from "@/components/Sidebar/Sidebar";
 import { Bar } from "@/components/Bar/Bar";
 import { Search } from "@/components/Search/Search";
 import { Navigation } from "@/components/Navigation/Navigation";
+import { CurrentTrackProvider } from "@/contexts/CurrentTrackProvider";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <main className={styles.main}>
-          <Navigation />
-          <div className={styles.mainCenterblock}>
-            <Search />
-            <Tracks />
-          </div>
-          <Sidebar />
-        </main>
-        <Bar />
-        <footer/>
+        <CurrentTrackProvider>
+          <main className={styles.main}>
+            <Navigation />
+            <div className={styles.mainCenterblock}>
+              <Search />
+              <Tracks />
+            </div>
+            <Sidebar />
+          </main>
+          <Bar />
+        </CurrentTrackProvider>
+        <footer />
       </div>
     </div>
   );

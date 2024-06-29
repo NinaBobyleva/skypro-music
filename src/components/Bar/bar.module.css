@@ -30,3 +30,11 @@
     align-items: center;
     justify-content: flex-start;
   }
+
+  .audio {
+    display: none;
+  }
+
+  .wrapper {
+    display: flex;
+  }

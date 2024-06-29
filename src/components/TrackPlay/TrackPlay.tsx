@@ -1,7 +1,12 @@
 import styles from "./trackPlay.module.css";
+import classNames from "classnames";
 
-export function TrackPlay() {
-    const className = require('classnames');
+type TrackPlayProps = {
+  name: string,
+  author: string
+}
+
+export function TrackPlay({name, author}: TrackPlayProps) {
   return (
     <div className={styles.playerTrackPlay}>
       <div className={styles.trackPlayContain}>
@@ -12,22 +17,22 @@ export function TrackPlay() {
         </div>
         <div className={styles.trackPlayAuthor}>
           <a className={styles.trackPlayAuthorLink} href="http://">
-            Ты та...
+            {name}
           </a>
         </div>
         <div className={styles.trackPlayAlbum}>
           <a className={styles.trackPlayAlbumLink} href="http://">
-            Баста
+            {author}
           </a>
         </div>
       </div>
       <div className={styles.trackPlayLikeDis}>
-        <div className={className(styles.trackPlayLike, styles.btnIcon)}>
+        <div className={classNames(styles.trackPlayLike, styles.btnIcon)}>
           <svg className={styles.trackPlayLikeSvg}>
             <use xlinkHref="img/icon/sprite.svg#icon-like" />
           </svg>
         </div>
-        <div className={className(styles.trackPlayDislike, styles.btnIcon)}>
+        <div className={classNames(styles.trackPlayDislike, styles.btnIcon)}>
           <svg className={styles.trackPlayDislikeSvg}>
             <use xlinkHref="img/icon/sprite.svg#icon-dislike" />
           </svg>
